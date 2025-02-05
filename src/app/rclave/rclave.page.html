@@ -1,0 +1,42 @@
+<ion-content class="darkula-theme">
+  <ion-card class="darkula-card">
+    <ion-card-header>
+      <ion-card-title>Recuperar Contraseña</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Input del usuario (CI) -->
+      <ion-item class="darkula-item">
+        <ion-label >Usuario</ion-label>
+        <ion-item class="darkula-item">
+          <ion-input [(ngModel)]="usuario"></ion-input>
+        </ion-item>
+       </ion-item>
+
+      <!-- Input para la respuesta de seguridad, visible solo si la pregunta existe -->
+      <ion-item class="darkula-item">
+        <ion-label >{{ pregunta }}</ion-label>
+        <ion-item *ngIf="pregunta" class="darkula-item">
+          <ion-input [(ngModel)]="respuesta"></ion-input>
+        </ion-item>
+      </ion-item>
+
+
+      <!-- Botón para verificar el usuario -->
+      <ion-button expand="full" class="darkula-button" (click)="verificarUsuario()" *ngIf="!pregunta">Verificar Usuario</ion-button>
+      
+      <!-- Botón para verificar la respuesta de seguridad -->
+      <ion-button expand="full" class="darkula-button" (click)="verificarRespuesta()" *ngIf="pregunta">Verificar Respuesta</ion-button>
+      
+      <!-- Input para la nueva contraseña, visible solo después de verificar la respuesta -->
+      <ion-item *ngIf="mostrarCambioClave" class="darkula-item">
+        <ion-label >Nueva Clave</ion-label>
+        <ion-item *ngIf="mostrarCambioClave" class="darkula-item">
+          <ion-input type="password" [(ngModel)]="nuevaClave"></ion-input>
+        </ion-item>
+      </ion-item>
+
+      <!-- Botón para cambiar la contraseña -->
+      <ion-button expand="full" class="darkula-button" (click)="cambiarClave()" *ngIf="mostrarCambioClave">Cambiar Clave</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

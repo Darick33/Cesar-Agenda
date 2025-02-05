@@ -1,0 +1,36 @@
+<ion-header [translucent]="true" class="darkula-toolbar">
+  <ion-toolbar>
+    <ion-title>Contacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="darkula-theme">
+  <ion-item class="darkula-item">
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="text_nombre" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item class="darkula-item">
+    <ion-label position="floating">Apellido</ion-label>
+    <ion-input [(ngModel)]="text_apellido" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item class="darkula-item">
+    <ion-label position="floating">Teléfono</ion-label>
+    <ion-input [(ngModel)]="text_telefono" type="tel" (ionBlur)="verificarNumero()"></ion-input>
+  </ion-item>
+  
+  <ion-text color="danger" *ngIf="mensaje" class="ion-text-danger">
+    {{ mensaje }}
+  </ion-text>
+
+  <ion-item class="darkula-item">
+    <ion-label position="floating">Correo</ion-label>
+    <ion-input [(ngModel)]="text_correo" type="email"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none" class="darkula-item">
+    <ion-button expand="full" color="success" (click)="guardar()">Guardar</ion-button>
+    <ion-button expand="full" color="danger" (click)="cancelar()">Cancelar</ion-button>
+  </ion-item>
+</ion-content>

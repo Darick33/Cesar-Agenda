@@ -1,0 +1,38 @@
+<ion-header [translucent]="true" class="darkula-toolbar">
+  <ion-toolbar>
+    <ion-title>Eliminar Contacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="darkula-theme">
+  <ion-item class="darkula-item">
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="text_nombre" type="text" readonly=""></ion-input>
+  </ion-item>
+
+  <ion-item class="darkula-item">
+    <ion-label position="floating">Apellido</ion-label>
+    <ion-input [(ngModel)]="text_apellido" type="text" readonly=""></ion-input>
+  </ion-item>
+
+  <ion-item class="darkula-item">
+    <ion-label position="floating" type="text" readonly="">Teléfono</ion-label>
+    <ion-input [(ngModel)]="text_telefono"></ion-input>
+  </ion-item>
+
+  <ion-item class="darkula-item">
+    <ion-label position="floating" type="email" readonly="">Correo</ion-label>
+    <ion-input [(ngModel)]="text_correo"></ion-input>
+  </ion-item>
+
+  <ion-item class="darkula-item">
+    <ion-button color="danger" id="mostrar-alerta" readonly="">Eliminar</ion-button>
+    <ion-button color="dark">Cancelar</ion-button>
+  </ion-item>
+
+  <ion-alert
+    trigger="mostrar-alerta"
+    header="¿Está seguro de eliminar este contacto?"
+    [buttons]="botones">
+  </ion-alert>
+</ion-content>

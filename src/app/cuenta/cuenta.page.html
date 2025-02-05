@@ -1,0 +1,42 @@
+<ion-header [translucent]="true" class="darkula-toolbar">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="darkula-theme">
+  <ion-item class="darkula-item">
+    <ion-label>Cédula</ion-label>
+    <ion-input type="text" [(ngModel)]="txt_cedula" (focusout)="vcedula()"></ion-input>
+  </ion-item>
+  <ion-item class="darkula-item">
+    <ion-label>Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="txt_nombre"></ion-input>
+  </ion-item>
+  <ion-item class="darkula-item">
+    <ion-label>Apellido</ion-label>
+    <ion-input type="text" [(ngModel)]="txt_apellido"></ion-input>
+  </ion-item>
+  <ion-item class="darkula-item">
+    <ion-label>Correo</ion-label>
+    <ion-input type="text" [(ngModel)]="txt_correo"></ion-input>
+  </ion-item>
+  <ion-item class="darkula-item">
+    <ion-label>Clave</ion-label>
+    <ion-input type="password" [(ngModel)]="txt_clave" (focusout)="vclave()"></ion-input>
+  </ion-item>
+  <ion-item class="darkula-item">
+    <ion-label>Confirmar clave</ion-label>
+    <ion-input type="password" [(ngModel)]="txt_confirmarClave" (input)="vclave()"></ion-input>
+    <ion-label color="danger">{{ mensaje }}</ion-label>
+  </ion-item>
+  <ion-item class="darkula-item">
+    <ion-button class="darkula-button" expand="block" (click)="registrar()">Registrar</ion-button>
+    <ion-button class="darkula-button" expand="block" (click)="cancelar()">Cancelar</ion-button>
+  </ion-item>
+</ion-content>

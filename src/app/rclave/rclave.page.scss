@@ -1,0 +1,56 @@
+.darkula-theme {
+    --background: #21222c;
+    --ion-background-color: #21222c;
+    --ion-text-color: #f8f8f2;
+    --ion-item-background: #282a36;
+    font-family: 'Fira Code', monospace;
+  }
+  
+  .darkula-card {
+    --background: #282a36;
+    --ion-card-background: #282a36;
+    --ion-card-color: #f8f8f2;
+    font-family: 'Fira Code', monospace;
+  }
+  
+  .darkula-button {
+    --background: #50fa7b;
+    --color: #282a36;
+    --border-radius: 8px;
+  }
+  
+  .darkula-button:hover {
+    --background: #bd93f9;
+  }
+  
+  ion-input {
+    --background: #282a36;
+    --color: #f8f8f2;
+  }
+  
+  ion-label {
+    color: #f8f8f2;
+  }
+  
+  ion-button {
+    --background: #bd93f9;
+    --color: #f8f8f2;
+  }
+  
+  ion-button:hover {
+    --background: #ff5555;
+  }
+  
+  ion-item {
+    --ion-item-background: #282a36;
+  }
+  
+  ion-label {
+    font-size: 16px;
+    color: #f8f8f2;
+  }
+  
+  ion-input {
+    font-size: 16px;
+  }
+  

@@ -1,0 +1,41 @@
+<ion-app>
+  <div class="ion-page" id="main-content">
+    <ion-header class="darkula-toolbar">
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Perfil</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="ion-padding darkula-theme">
+      <form (ngSubmit)="actualizarPerfil()">
+        <ion-item class="darkula-item">
+          <ion-label position="floating">Cédula</ion-label>
+          <ion-input [(ngModel)]="perfil.ci" name="ci" type="text" readonly=""></ion-input>
+        </ion-item>
+
+        <ion-item class="darkula-item">
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input [(ngModel)]="perfil.nombre" name="nombre" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item class="darkula-item">
+          <ion-label position="floating">Apellido</ion-label>
+          <ion-input [(ngModel)]="perfil.apellido" name="apellido" type="text"></ion-input>
+        </ion-item>
+        
+        <ion-item class="darkula-item">
+          <ion-label position="floating">Correo</ion-label>
+          <ion-input [(ngModel)]="perfil.correo" name="correo" type="text"></ion-input>
+        </ion-item>
+
+        <div style="display: flex; justify-content: center; margin-top: 20px;">
+          <ion-button class="darkula-button" type="submit" expand="full">Actualizar</ion-button>
+          <ion-button class="darkula-button"(click)="cancelar()" expand="full">Cancelar</ion-button>
+        </div>
+      </form>
+    </ion-content>
+  </div>
+</ion-app>

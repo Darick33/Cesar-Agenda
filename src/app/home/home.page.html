@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="darkula-toolbar">
+    <ion-title>
+      Agenda
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="darkula-theme">
+  <div id="contenedor">
+    <ion-item class="darkula-item">
+      <ion-label class="titulo">Agenda</ion-label>
+    </ion-item>
+
+    <ion-item class="darkula-item">
+      <img src="../../assets/imgs/agendas.png" alt="" class="darkula-img">
+    </ion-item>
+    <ion-item class="darkula-item">
+      <ion-label class="etiqueta">Agenda Electrónica</ion-label>
+    </ion-item>
+    <ion-card color="dark" class="darkula-card">
+      <ion-card-header>
+        <ion-card-title>Inicio de Sesión</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item class="darkula-item">
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="txt_usuario"></ion-input>
+        </ion-item>
+        <ion-item class="darkula-item">
+          <ion-label position="floating">Clave</ion-label>
+          <ion-input type="password" [(ngModel)]="txt_clave"></ion-input>
+        </ion-item>
+        <!-- Botón Iniciar Sesión -->
+        <div class="text-center mb-4">
+          <ion-item class="darkula-item">
+            <ion-button id="open-loading" expand="block" color="primary" (click)="login()">Iniciar Sesión</ion-button>
+          </ion-item>
+          <ion-loading trigger="open-loading" message="Loading..." [duration]="3000" spinner="circles"></ion-loading>
+        </div>
+        <ion-item class="darkula-item">
+          <table>
+            <tr>
+              <td class="ion-margin ion-padding">
+                <span class="opciones" (click)="crear()">Crear Cuenta</span>
+              </td>
+              <td>
+                <span class="opciones" (click)="recuperar()">Recuperar Clave</span>
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

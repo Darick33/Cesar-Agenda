@@ -1,0 +1,42 @@
+.darkula-theme {
+  --background: #282a36;
+  --ion-background-color: #282a36;
+  --ion-text-color: #f8f8f2;
+  --ion-item-background: #44475a;
+}
+
+.darkula-toolbar {
+  --background: #44475a;
+  --ion-toolbar-background: #44475a;
+  --ion-toolbar-color: #f8f8f2;
+  color: #f8f8f2;
+}
+
+.darkula-item {
+  --background: #44475a;
+  --color: #f8f8f2;
+}
+
+.darkula-card {
+  background: #44475a;
+  color: #f8f8f2;
+  --ion-card-background: #44475a;
+}
+
+.darkula-img {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: auto;
+  filter: brightness(0.8);
+}
+
+.opciones {
+  color: #50fa7b;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.opciones:hover {
+  color: #bd93f9;
+}
